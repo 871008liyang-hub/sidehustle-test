@@ -280,7 +280,7 @@
   function loadConfig() {
     $('rebate-shop').textContent = '店铺：' + (C.SHOP_NAME || '');
     $('rebate-rule').textContent = C.REBATE_RULE || '';
-    $('rebate-cs').textContent = '客服：' + (C.CUSTOMER_SERVICE || '');
+    $('rebate-cs').textContent = '客服微信：' + (C.CUSTOMER_SERVICE || '');
   }
   $('btn-rebate').addEventListener('click', () => { loadConfig(); $('modal-rebate').classList.add('active'); });
   $('btn-rebate-close').addEventListener('click', () => $('modal-rebate').classList.remove('active'));
