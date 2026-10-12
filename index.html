@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>副业天赋测试 · 你偷偷值钱的能力</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- 登录视图 -->
+    <section id="view-login" class="view active">
+      <div class="login-card">
+        <h1 class="brand">副业天赋测试</h1>
+        <p class="brand-sub">你偷偷值钱的能力</p>
+        <p class="login-tip">凭测试密码进入，每个密码可完成 3 次测试</p>
+        <input id="pwd-input" type="text" inputmode="text" autocomplete="off" placeholder="请输入测试密码" />
+        <button id="btn-enter" class="btn btn-primary">进入测试</button>
+        <p id="login-msg" class="login-msg"></p>
+      </div>
+    </section>
+
+    <!-- 答题视图 -->
+    <section id="view-quiz" class="view">
+      <div class="quiz-top">
+        <span id="quiz-progress-text">第 1 / 24 题</span>
+        <button id="btn-back-home" class="link-btn">退出</button>
+      </div>
+      <div class="progress-bar"><div id="progress-fill" class="progress_fill"></div></div>
+      <div id="quiz-body" class="quiz-body"></div>
+      <div class="quiz-nav">
+        <button id="btn-prev" class="btn btn-ghost">上一题</button>
+        <button id="btn-next" class="btn btn-primary">下一题</button>
+      </div>
+    </section>
+
+    <!-- 结果视图 -->
+    <section id="view-result" class="view">
+      <div class="result-head">
+        <p class="result-tag">你 的 副 业 天 赋 类 型</p>
+        <h2 id="result-name" class="result-name">—</h2>
+        <p id="result-sub" class="result-sub">—</p>
+      </div>
+      <div class="radar-wrap">
+        <canvas id="radar" width="340" height="340"></canvas>
+      </div>
+      <p id="result-desc" class="result-desc"></p>
+
+      <h3 class="block-title">你偷偷值钱的能力</h3>
+      <ul id="result-points" class="points"></ul>
+
+      <h3 class="block-title">最适合你的 3 个副业</h3>
+      <div id="result-biz" class="biz"></div>
+
+      <div class="share-box">
+        <p class="share-box-title">可直接复制发朋友圈</p>
+        <p id="result-share" class="share-text"></p>
+        <button id="btn-copy-share" class="btn btn-ghost btn-sm">复制这段文案</button>
+      </div>
+
+      <div class="result-actions">
+        <button id="btn-save" class="btn btn-primary">保存结果长图</button>
+        <button id="btn-copy-link" class="btn btn-ghost">复制结果链接</button>
+        <button id="btn-retake" class="btn btn-ghost">再测一次</button>
+        <button id="btn-rebate" class="btn btn-gold">好评有礼</button>
+      </div>
+      <p class="result-foot">本测试为趣味自评，不替代职业测评或专业咨询。</p>
+    </section>
+
+  </div>
+
+  <!-- 好评有礼弹窗 -->
+  <div id="modal-rebate" class="modal">
+    <div class="modal-card">
+      <h3 class="modal-title">好评有礼</h3>
+      <p id="rebate-shop" class="rebate-line"></p>
+      <p id="rebate-rule" class="rebate-rule"></p>
+      <p id="rebate-cs" class="rebate-cs"></p>
+      <button id="btn-rebate-close" class="btn btn-primary">我知道了</button>
+    </div>
+  </div>
+
+  <!-- 长图弹窗 -->
+  <div id="modal-longimg" class="modal">
+    <div class="modal-card modal-card-wide">
+      <h3 class="modal-title">保存结果长图</h3>
+      <div class="longimg-scroll"><img id="longimg" class="longimg" alt="结果长图" /></div>
+      <p class="longimg-tip">手机：长按上方图片 → 保存到相册　|　电脑：点下方按钮下载</p>
+      <div class="modal-actions">
+        <a id="btn-download-img" class="btn btn-primary" download="副业天赋测试结果.png">下载到电脑</a>
+        <button id="btn-longimg-close" class="btn btn-ghost">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 题库与结果数据 -->
+  <script src="data.js"></script>
+  <!-- 站点配置（含 Supabase 连接信息，部署前请替换占位符） -->
+  <script src="config.js"></script>
+  <!-- Supabase 客户端（CDN，UMD 全局变量 supabase） -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- 前端逻辑 -->
+  <script src="app.js"></script>
+</body>
+</html>
