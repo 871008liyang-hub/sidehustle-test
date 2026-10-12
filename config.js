@@ -11,9 +11,9 @@ const SITE_CONFIG = {
   SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjYmt6cHdweGpwaGRxY3VzY3duIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE3NzQ4NTAsImV4cCI6MjEwNzM1MDg1MH0.O4kuMSozfkmd5Jkvd6LOHXG1JcVQsetOXx253j9SxMA',
 
   // —— 店铺 / 客服 / 返现（好评有礼弹窗用）——
-  SHOP_NAME: '你的店铺名称',
-  CUSTOMER_SERVICE: '你的客服微信 / QQ（占位）',
-  REBATE_RULE: '在店铺完成好评后，联系客服并发送好评截图，即可获得 1 元返现。',
+  SHOP_NAME: '肉加魔V5的店',
+  CUSTOMER_SERVICE: 'roujiamov5',
+  REBATE_RULE: '在店铺完成好评后，联系客服微信 roujiamov5 并发送好评截图，即可获得 1 元返现。',
 
   // 每个密码允许完成的测试次数（需与数据库 max_uses 一致）
   MAX_TESTS: 3,
